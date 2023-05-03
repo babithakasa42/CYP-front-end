@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <link href="./index.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('send_css') }}">
+    <style>
+      h1 {
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+  <h1>OPTIMISING CROP YIELD ESTIMATION WITH REAL-TIME OBJECT DETECTION AND REGRESSION ANALYSIS USING DRONE FOOTAGE AND WEB INTERFACE </h1>
+    <div class="container">
+        <h1>Enter the Drone Footage to estimate the yield</h1>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <input type="file" name="video" accept="video/*">
+            <br><br>
+            <input type="submit" value="Play">
+        </form>
+    </div>
+</body>
+</html>

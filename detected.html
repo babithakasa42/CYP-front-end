@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detected Crops</title>
+    <link href="./detected.css" rel="stylesheet"/>
+</head>
+<body>
+    <h1>Detected Crop Produce from Drone footage</h1>
+    {% for detected_image in detected_images %}
+        <img src="{{ url_for('static', filename='detectedframes/' + detected_image) }}" alt="{{ detected_image }}" width="300" height="300">
+    {% endfor %}
+    <p>" The Total number of detected boxes from the Agricultural land footage: " {{ variable_name }}</p>
+    <div style="text-align:center">
+        <button onclick="window.location.href='/Regression'">EDA and Additional Input</button>
+    </div>
+</body>
+</html>

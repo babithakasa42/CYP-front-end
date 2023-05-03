@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Uploaded</title>
+    <link href="./video.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('send_css')}}">
+    <link rel="stylesheet" type="text/css" href="path/to/your/css/file.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1><span style="color: #aaff00;">U</span>ploaded <span style="color: #aaff00;">D</span>rone <span style="color: #aaff00;">F</span>ootage</h1>
+        <video width="640" height="480" controls>
+            <source src="{{ url_for('static', filename=filename) }}" type="video/mp4">
+        </video>
+        <br>
+        <a href="/">Upload Another Video</a>
+        <button onclick="window.location.href='/SegmentedFrames'">Check Segmented Frames</button>
+    </div>
+</body>
+</html>

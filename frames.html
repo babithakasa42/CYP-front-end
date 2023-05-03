@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Gallery</title>
+    <link href="./frames.css" rel="stylesheet"/>
+</head>
+<body>
+    <h1>Image Gallery</h1>
+    {% for image_file in image_files %}
+        <img src="{{ url_for('static', filename='vidtestingframes/' + image_file) }}" alt="{{ image_file }}" width="300" height="300">
+    {% endfor %}
+    <div style="text-align: center">
+        <button onclick="window.location.href='/detected'">Check Detected Crops</button>
+    </div>
+</body>
+</html>

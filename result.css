@@ -1,0 +1,43 @@
+body {
+    background-color: #d7f7d7;
+    font-family: Arial, sans-serif;
+}
+/* Box Styles */
+.box {
+    display: inline-block;
+    padding: 20px;
+    /* margin: auto; */
+    margin: 20vh 35vw;
+    height: 50vh;
+    text-align: center;
+    font-size: 24px;
+    background-color: #f5f5f5;
+    border: 2px solid#aaff00 ;
+    border-radius: 1.5rem;
+  }
+
+h1{
+    font-size: 2em;
+}
+  .result-text {
+    background-color: #F9FAFB;
+    border-radius: 20px;
+    padding: 20px;
+    height: 32vh;
+    box-shadow: 
+      -10px -10px 20px rgba(255, 255, 255, 1), 
+      4px 4px 10px rgba(40, 106, 67, 0.365) inset;
+  }
+  
+  p{
+    font-size: 32px;
+  }
+
+  .box:hover {
+    background-color: #f5f5f5;
+    color: black;
+    transform: scale(1.05);
+    box-shadow: 10px 10px 30px #aaff00, -10px -10px 30px #ffffff;
+  }
+
+  

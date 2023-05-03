@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EDA and Additional Input</title>
+    <link href="./regression.css" rel="stylesheet"/>
+</head>
+<body>
+    <h1>Exploratory Data Analysis</h1>
+    {% for analysis_image in analysis_images %}
+        <img src="{{ url_for('static', filename='DataAnalysis/' + analysis_image) }}" alt="{{ analysis_image }}" width="350" height="350">
+    {% endfor %}
+    <h1>Additional Input for Regression</h1>
+    <form method="POST" action="{{ url_for('submit') }}">
+  <h2>Enter the details:</h2>
+  <p>
+  <div style="display:flex;flex-direction:row;justify-content: space-between;">
+    <div class="form-column">
+      <label for="o3">Measured 24h mean O3:</label>
+      <input type="text" id="o3" name="o3"><br>
+      
+      <label for="ear_num">Ear number per plant:</label>
+      <input type="text" id="ear_num" name="ear_num"><br>
+      
+      <label for="ear_weight">Ear weight in sample (g):</label>
+      <input type="text" id="ear_weight" name="ear_weight"><br>
+      
+      <label for="wet_grain_weight">Wet grain weight in sample (g):</label>
+      <input type="text" id="wet_grain_weight" name="wet_grain_weight"><br>
+      
+      <label for="dry_grain_weight">Dry grain weight in sample (g):</label>
+      <input type="text" id="dry_grain_weight" name="dry_grain_weight"><br>
+
+      <label for="dry_grain_weight_per_ear">Dry grain weight per ear (g):</label>
+      <input type="text" id="dry_grain_weight_per_ear" name="dry_grain_weight_per_ear"><br>
+      
+      <label for="grain_num_per_ear">Grain number per ear:</label>
+      <input type="text" id="grain_num_per_ear" name="grain_num_per_ear"><br>
+   
+    </div>
+  </p>  
+    <div class="form-column1">
+      <div id="icontainer">
+      <label for="ear_num_per_m2">Ear number per m<sup>2</sup>:</label>
+      <input type="text" id="ear_num_per_m2" name="ear_num_per_m2">
+    </div>
+    <div id="icontainer">
+      <label for="harvest_index">Harvest index:</label>
+      <input type="text" id="harvest_index" name="harvest_index">
+    </div>
+    <div id="icontainer">
+      <label for="early_drought">Watering treatment (early drought):</label>
+      <input type="text" id="early_drought" name="early_drought">
+    </div>
+    <div id="icontainer">
+      <label for="late_drought">Watering treatment (late drought):</label>
+      <input type="text" id="late_drought" name="late_drought">
+    </div>
+
+    <div id="icontainer">
+      <label for="well_watered">Watering treatment (well-watered):</label>
+      <input type="text" id="well_watered" name="well_watered">
+    </div>
+    <div id="icontainer">
+      <label for="aphids_with">Presence of aphids (with treatment):</label>
+      <input type="text" id="aphids_with" name="aphids_with">
+    </div>
+      <div id="icontainer">
+      <label for="aphids_without">Presence of aphids (without treatment):</label>
+      <input type="text" id="aphids_without" name="aphids_without">
+    </div>
+    </div>
+  </div>
+  <center>
+  <button type="submit" onclick="window.location.href='/result'">Submit</button>
+  </center>
+</form>
+</body>
+</html>
